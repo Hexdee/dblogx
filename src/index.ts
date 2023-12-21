@@ -108,11 +108,6 @@ export function like(postId: string): Result<nat, string> {
 }
 
 $update;
-export function checkCaller(): boolean {
-    return ic.caller().toString() == ic.caller().toString()
-}
-
-$update;
 export function unlike(postId: string): Result<nat, string> {
     return match(postStorage.get(postId), {
         Some: (post) => {
